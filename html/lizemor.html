@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lizemor – broches &amp; mimos fofos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/motion.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="alert">Entregas locais</div>
+<header class="hero-header">
+  <div class="hero-copy">
+    <svg class="brand-bow" viewBox="0 0 120 82" aria-hidden="true" focusable="false">
+      <path d="M53 29C42 10 22 3 12 12 0 22 8 37 24 40c11 2 21-3 30-7zM67 29C78 10 98 3 108 12c12 10 4 25-12 28-11 2-21-3-30-7zM53 37c-6 12-9 24-15 38l21-12 1-25zM67 37c6 12 9 24 15 38L61 63l-1-25z" fill="#D14242"/>
+      <ellipse cx="60" cy="34" rx="9" ry="8" fill="#B83338" stroke="#FCF8F2" stroke-width="2"/>
+    </svg>
+    <h1>Lizemor</h1>
+    <p>broches &amp; mimos fofos</p>
+    <a class="hero-cta" href="#broochContent">Explorar produtos <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-scene" id="heroScene" role="group" aria-label="Broches decorativos; clique para apertar">
+    <button class="hero-pin hero-floater hero-floater-a" type="button" data-model-code="HK-17" aria-label="Apertar broche Hello Kitty 17"><img alt="" aria-hidden="true"></button>
+    <button class="hero-pin hero-floater hero-floater-b" type="button" data-model-code="HA-08" aria-label="Apertar broche Homem-Aranha 08"><img alt="" aria-hidden="true"></button>
+    <button class="hero-pin hero-floater hero-floater-c" type="button" data-model-code="GT-12" aria-label="Apertar broche Gato 12"><img alt="" aria-hidden="true"></button>
+    <button class="hero-pin hero-floater hero-floater-d" type="button" data-model-code="DS-19" aria-label="Apertar broche Demon Slayer 19"><img alt="" aria-hidden="true"></button>
+    <button class="hero-pin hero-floater hero-floater-e" type="button" data-model-code="HP-06" aria-label="Apertar broche Harry Potter 06"><img alt="" aria-hidden="true"></button>
+  </div></header>
+
+
+<div class="modebar" role="tablist" aria-label="Escolher seção do site">
+  <button class="mode" role="tab" id="modeBroches" aria-controls="broochContent" aria-selected="true" type="button">Broches</button>
+  <button class="mode" role="tab" id="mode3d" aria-controls="studio" aria-selected="false" type="button">Impressão 3D</button>
+</div>
+
+<section id="studio" hidden aria-label="Impressão 3D">
+  <div class="sub3" role="tablist" aria-label="Tipo de impressão 3D">
+    <button class="tab3" role="tab" id="t3pronto" data-v3="pronto" aria-selected="true" type="button">Modelos Prontos</button>
+    <button class="tab3" role="tab" id="t3custom" data-v3="custom" aria-selected="false" type="button">Personalizados</button>
+    <button class="tab3" role="tab" id="t3sob" data-v3="sob" aria-selected="false" type="button">Sob Medida</button>
+  </div>
+
+  <div id="v3pronto">
+    <h2 class="s3-title">Impressão 3D pronta para você</h2>
+    <p class="s3-sub">Escolha uma peça, configure a cor e adicione ao seu pedido.</p>
+    <p class="s3-note" role="note"><span>Cores disponíveis:</span><span><i class="swatch-black" aria-hidden="true"></i>Preto</span><span><i class="swatch-blue" aria-hidden="true"></i>Azul</span></p>
+    <div class="p3grid" id="p3grid"></div>
+  </div>
+
+  <div id="v3custom" hidden>
+    <h2 class="s3-title">Um chaveiro com seu nome</h2>
+    <p class="s3-sub">Escolha o nome e a combinação de cores para criar seu chaveiro personalizado.</p>
+    <div class="p3grid" id="p3grid2"></div>
+
+  </div>
+
+  <div id="v3sob" hidden>
+  <h2 class="s3-title" id="orcamento">Tem uma ideia? Vamos tirar do papel.</h2>
+  <p class="s3-sub">Envie seu modelo ou conte o que deseja imprimir. Vamos avaliar o projeto e preparar um orçamento.</p>
+  <ol class="steps">
+    <li><b>01</b><span><strong>Conte sua ideia</strong><small>Descreva a peça que deseja imprimir.</small></span></li>
+    <li><b>02</b><span><strong>Envie a referência</strong><small>Mande uma foto, arquivo ou link pelo WhatsApp.</small></span></li>
+    <li><b>03</b><span><strong>Receba seu orçamento</strong><small>Confira o valor e aprove a impressão.</small></span></li>
+  </ol>
+  <form class="quote" id="quoteForm">
+    <div class="form-heading"><h3>Conte o que você precisa</h3><p>Preencha as informações principais para começarmos.</p></div>
+    <label class="f">Seu nome *<input type="text" id="qName" autocomplete="name" placeholder="Como podemos te chamar?" required></label>
+    <label class="f">O que você gostaria de imprimir? *<textarea id="qDesc" placeholder="Descreva sua ideia ou informe o link do modelo." required></textarea></label>
+    <div class="row">
+      <label class="f">Tamanho aproximado<input type="text" id="qSize" placeholder="Ex.: 8 cm de altura"></label>
+      <label class="f">Quantidade<input type="text" id="qQty" inputmode="numeric" placeholder="Ex.: 1"></label>
+      <label class="f">Cor<input type="text" id="qColor" placeholder="Ex.: preto ou azul"></label>
+    </div>
+    <p class="tip">O arquivo STL, 3MF ou OBJ, ou uma fotografia de referência, pode ser enviado diretamente na conversa do WhatsApp.</p>
+    <div class="err" id="qErr" role="alert"></div>
+    <button class="wa" id="qSend" type="button">Solicitar orçamento pelo WhatsApp</button>
+  </form>
+  </div>
+</section>
+
+<nav role="tablist" aria-label="Tipo de broche">
+  <button class="tab" role="tab" aria-selected="true" data-filter="pronto">Modelos prontos</button>
+  <button class="tab" role="tab" aria-selected="false" data-filter="personalizado">Personalizados</button>
+</nav>
+
+<main id="broochContent">
+  <div class="brooch-intro" id="readyIntro">
+    <h2>Encontre seu próximo broche</h2>
+    <p>Escolha seus modelos favoritos. Você pode selecionar mais de um e definir o tamanho na próxima etapa.</p>
+  </div>
+  <section class="picker" id="picker">
+    <div class="chips" id="chips" role="group" aria-label="Categorias"></div>
+    <div class="models" id="models"></div>
+    <button class="model-more" id="modelMore" type="button" hidden>Mostrar mais modelos</button>
+  <div class="picked" id="picked" hidden></div>
+  </section>
+  <p class="custom-feedback" id="customFeedback" role="status" aria-live="polite" hidden></p>
+  <section class="size-step" id="sizeStep" hidden>
+  <h2 class="sizes-title">Escolha o tamanho</h2>
+  <p class="hint">O tamanho escolhido será aplicado a todos os modelos selecionados.</p>
+  <div class="grid" id="grid">
+
+    <!-- Para trocar a foto: substitua o src (e o data-ready) de cada <img> por um arquivo ou link seu. -->
+
+    <article class="card" data-id="b58" tabindex="0" aria-expanded="false" aria-label="Tamanho 58 mm. Pressione Enter para abrir os detalhes.">
+      <span class="pin-photo pin-broche"><img alt="Broche 58mm" src="../assets/broche-58mm.webp" data-ready="../assets/broche-58mm.webp" data-custom="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23F6DADA'/%3E%3Ccircle cx='150' cy='150' r='140' fill='%23fff' stroke='%23D14242' stroke-width='5' stroke-dasharray='12 9'/%3E%3Ctext x='150' y='160' font-size='54' text-anchor='middle'%3EART%3C/text%3E%3Ctext x='150' y='205' font-size='18' text-anchor='middle' fill='%23D14242' font-family='sans-serif'%3Esua arte aqui%3C/text%3E%3C/svg%3E"></span>
+      <div class="body">
+        <h3>G — 58 mm <span class="size-full-name">Broche 58MM (Grande)</span></h3>
+        <p>Perfeito para bolsas, mochilas e jaquetas. Muito charme em um só broche.</p>
+        <fieldset class="opts" hidden>
+          <label><input type="radio" name="o58" value="8" data-label="Normal" checked> Normal - R$ 8,00</label>
+          <label><input type="radio" name="o58" value="10" data-label="Com brilho"> Com brilho - R$ 10,00</label>
+        </fieldset>
+        <div class="price" data-price>R$ 8,00</div>
+        <button class="size-choose" type="button">Selecionar tamanho</button>
+        <button class="add" hidden>Adicionar ao pedido</button>
+      </div>
+    </article>
+
+    <article class="card" data-id="b32" data-price="4.5" tabindex="0" aria-expanded="false" aria-label="Tamanho 32 mm. Pressione Enter para abrir os detalhes.">
+      <span class="pin-photo pin-broche"><img alt="Broche 32mm" src="../assets/broche-32mm.webp" data-ready="../assets/broche-32mm.webp" data-custom="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23F6DADA'/%3E%3Ccircle cx='150' cy='150' r='140' fill='%23fff' stroke='%23D14242' stroke-width='5' stroke-dasharray='12 9'/%3E%3Ctext x='150' y='160' font-size='54' text-anchor='middle'%3EART%3C/text%3E%3Ctext x='150' y='205' font-size='18' text-anchor='middle' fill='%23D14242' font-family='sans-serif'%3Esua arte aqui%3C/text%3E%3C/svg%3E"></span>
+      <div class="body">
+        <h3>M — 32 mm <span class="size-full-name">Broche 32MM (Médio)</span></h3>
+        <p>O tamanho clássico, ideal para o dia a dia e para montar combinações.</p>
+        <div class="price">R$ 4,50</div>
+        <button class="size-choose" type="button">Selecionar tamanho</button>
+        <button class="add" hidden>Adicionar ao pedido</button>
+      </div>
+    </article>
+
+    <article class="card" data-id="b25" data-price="2.5" tabindex="0" aria-expanded="false" aria-label="Tamanho 25 mm. Pressione Enter para abrir os detalhes.">
+      <span class="pin-photo pin-broche"><img alt="Broche 25mm" src="../assets/broche-25mm.webp" data-ready="../assets/broche-25mm.webp" data-custom="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23F6DADA'/%3E%3Ccircle cx='150' cy='150' r='140' fill='%23fff' stroke='%23D14242' stroke-width='5' stroke-dasharray='12 9'/%3E%3Ctext x='150' y='160' font-size='54' text-anchor='middle'%3EART%3C/text%3E%3Ctext x='150' y='205' font-size='18' text-anchor='middle' fill='%23D14242' font-family='sans-serif'%3Esua arte aqui%3C/text%3E%3C/svg%3E"></span>
+      <div class="body">
+        <h3>P — 25 mm <span class="size-full-name">Broche 25MM (Pequeno)</span></h3>
+        <p>Delicado e compacto, ótimo para presentear e colecionar.</p>
+        <div class="price">R$ 2,50</div>
+        <button class="size-choose" type="button">Selecionar tamanho</button>
+        <button class="add" hidden>Adicionar ao pedido</button>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+
+</main>
+
+<button class="fab is-empty" id="fab" aria-label="Abrir meu pedido" aria-expanded="false" aria-controls="cart">
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+  <span class="fab-total" id="fabTotal" hidden></span><b id="count">0</b>
+</button>
+<button class="size-fab" id="sizeFab" type="button" aria-label="Ir para escolher o tamanho" aria-controls="sizeStep" hidden>
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/><path d="M12 12.5v5m-2.5-2.5h5"/></svg>
+</button>
+<div class="overlay" id="overlay"></div>
+
+<aside id="cart" aria-label="Seu pedido" aria-hidden="true">
+  <div class="ahead">
+    <div><h2>Seu pedido</h2><p class="cart-subtitle">Confira seus produtos antes de continuar.</p></div>
+    <button class="close" id="close" aria-label="Fechar">✕</button>
+  </div>
+  <div class="abody">
+    <div class="cart-section-head"><h3>Seus itens</h3><span id="itemsCount">0 itens</span></div>
+    <div id="items"></div>
+    <form id="form">
+      <div class="form-heading"><h3>Entrega e contato</h3><p>Preencha os dados para finalizar seu pedido.</p></div>
+        <label class="f">Nome completo *<input type="text" id="name" autocomplete="name" placeholder="Como podemos te chamar?" required></label>
+        <label class="f">Endereço de entrega *<textarea id="addr" placeholder="Rua, número, bairro e ponto de referência." required></textarea></label>
+        <label class="f">Observações<textarea id="notes" placeholder="Algum detalhe que precisamos saber?"></textarea></label>
+    </form>
+  </div>
+  <div class="afoot">
+    <div class="total"><span>Total do Pedido</span><span id="total">R$ 0,00</span></div>
+    <div class="err" id="err" role="alert"></div>
+    <p class="whatsapp-hint">O WhatsApp será aberto para continuarmos o atendimento e combinar a entrega.</p>
+    <button class="wa" id="send">Continuar no WhatsApp</button>
+  </div>
+</aside>
+
+
+<script src="../js/catalogo.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>
+

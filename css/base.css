@@ -1,0 +1,76 @@
+/* Lizemor · base */
+
+:root {
+  color-scheme:light;
+  --cream:#FCF8F2;
+  --paper:#FFFDFA;
+  --red:#D14242;
+  --red-soft:#F6DADA;
+  --green:#4A7A57;
+  --green-dark:#3B6247;
+  --ink:#4A3A3A;
+  --muted:#756761;
+  --line:#EBD9D0;
+  --line-strong:#DFC7BB;
+  --shadow:0 10px 28px rgba(82,58,48,.08);
+  --font-body:'Nunito Sans',Arial,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:18px
+}
+
+body {
+  margin:0;
+  padding:0 0 calc(82px + env(safe-area-inset-bottom));
+  background:var(--cream);
+  color:var(--ink);
+  font:400 16px/1.5 var(--font-body);
+  overflow-x:hidden
+}
+
+[hidden] {
+  display:none!important
+}
+
+button,input,textarea,select {
+  font:inherit
+}
+
+button {
+  color:inherit;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible {
+  outline:3px solid var(--red);
+  outline-offset:3px
+}
+
+img {
+  max-width:100%
+}
+
+h1,h2,h3,h4,p {
+  margin:0
+}
+
+h1,h2,h3,.s3-title {
+  font-family:var(--font-display)
+}
+
+p {
+  color:var(--muted)
+}
+
+body.cart-open {
+  overflow:hidden
+}

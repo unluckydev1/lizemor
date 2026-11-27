@@ -1,0 +1,51 @@
+/* Lizemor · motion */
+
+@keyframes size-fab-wiggle {
+  0%,82%,100% {
+    rotate:0deg
+  }
+  84% {
+    rotate:-8deg
+  }
+  86% {
+    rotate:8deg
+  }
+  88% {
+    rotate:-6deg
+  }
+  90% {
+    rotate:5deg
+  }
+  92% {
+    rotate:0deg
+  }
+}
+
+@keyframes bow-float {
+  to {
+    transform:translateY(-3px) rotate(2deg)
+  }
+}
+
+@keyframes pin-drift {
+  from {
+    translate:0 -3px;
+    rotate:-2deg
+  }
+  to {
+    translate:0 4px;
+    rotate:2deg
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+  *,*::before,*::after {
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important
+  }
+}
